@@ -7,7 +7,7 @@ class CourseAdmin(admin.ModelAdmin):
 
     list_display = ['name', 'slug', 'start_date', 'created_at']
     search_fields = ['name', 'slug']
-    prepopulate_fields = {'slug': ('name')}
+    prepopulated_fields = {'slug': ('name',)}
 
 
 class MaterialInlineAdmin(admin.StackedInline):
